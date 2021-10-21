@@ -19,7 +19,7 @@
     "Token",
     "Generation"
   ],
-  "author": "Dan Zeitman | Dolby.io",
+  "author": "Katie Gray| Dolby.io",
   "license": "See LICENSE in this repo",
   "bugs": {
     "url": "https://github.com/dolbyio-samples/communications-api-token-server-netlify/issues"
