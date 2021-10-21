@@ -12,7 +12,8 @@ exports.handler = async (event, context) => {
   // queryStringParameters – it’ll be in the event body encoded as a query string
   const params = querystring.parse(event.body);
   const eventCode = params.eventCode;
-
+  console.log(eventCode);
+  console.log(EVENT_CODE);
   if (eventCode === EVENT_CODE) {
     return {
       statusCode: 200,
