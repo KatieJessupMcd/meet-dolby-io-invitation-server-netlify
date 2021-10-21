@@ -10,11 +10,7 @@ exports.handler = async (event, context) => {
 
   // When the method is POST, the name will no longer be in the event’s
   // queryStringParameters – it’ll be in the event body encoded as a query string
-  const params = querystring.parse(event.body);
-  console.log('event', event);
-  console.log('event.body', event.body);
-  console.log('params', params);
-  const eventCode = params.eventCode;
+  const eventCode = event.queryStringParameters.eventCode;
   console.log('event code', eventCode);
   console.log('env var', EVENT_CODE);
   if (eventCode === EVENT_CODE) {
