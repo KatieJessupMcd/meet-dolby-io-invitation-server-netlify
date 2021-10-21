@@ -17,13 +17,21 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 200,
       body: 'Event Code Correct',
-      headers: { 'Access-Control-Allow-Origin': '*' },
+      headers: {
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Origin': '*', // NOTE this is to allow for CORS when testing locally
+        'Access-Control-Allow-Methods': 'OPTIONS,POST',
+      },
     };
   } else {
     return {
       statusCode: 401,
       body: 'Event Code Incorrect',
-      headers: { 'Access-Control-Allow-Origin': '*' },
+      headers: {
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Origin': '*', // NOTE this is to allow for CORS when testing locally
+        'Access-Control-Allow-Methods': 'OPTIONS,POST',
+      },
     };
   }
 };
