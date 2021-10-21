@@ -17,11 +17,13 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 200,
       body: 'Event Code Correct',
+      headers: { 'Access-Control-Allow-Origin': '*' },
     };
   } else {
     return {
       statusCode: 401,
       body: 'Event Code Incorrect',
+      headers: { 'Access-Control-Allow-Origin': '*' },
     };
   }
 };
